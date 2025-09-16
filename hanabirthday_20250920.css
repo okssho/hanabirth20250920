@@ -46,6 +46,7 @@ canvas#bg {
   position: relative;
   margin-top: -10em;
   margin-bottom: 10px;
+  transform: translateY(-50px); /* 上に50px移動 */
   
 }
 
@@ -62,13 +63,13 @@ canvas#bg {
   background: #ffffff;
   border-radius: 10px;
   position: relative;
-  top: 247px;
+  top: 200px;
   margin-left: 49.5%;
   width: 5px;
   height: 35px;
   -webkit-transform: translateY(-300px);
   -ms-transform: translateY(-300px);
-  transform: translateY(-800px);
+  transform: translateY(-900px);
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -598,7 +599,7 @@ canvas#bg {
   padding: 0;
   cursor: pointer;
   position: absolute;  /* 花火より上に */
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
