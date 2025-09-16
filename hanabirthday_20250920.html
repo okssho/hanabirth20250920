@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="hanabirthday_20250920.css">
 </head>
 <body>
+
   <!-- 花火を描くキャンバス -->
   <canvas id="bg"></canvas>
   <canvas id="bg"></canvas>
@@ -16,7 +17,19 @@
     HAPPY BIRTHDAY<br>
     HANA
   </h1>
-  
+
+  <button id="heartBtn" class="hidden">
+    <img src="heart1.png" alt="ハートボタン" class="heart-img">
+  </button>
+
+  <!-- モーダル本体 -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>お手紙</h2>
+    <p id="letter"></p> <!-- ここに文字が打たれる -->
+  </div>
+</div>
 
   <!-- ケーキやメッセージ等ここに追加してOK -->
   <div>
@@ -140,6 +153,7 @@
       <rect class="come" x="10" y="475.571" fill="#fefae9" width="180" height="4" />
     </svg>
   </div>
+  
 
   <script src="hanabirthday_20250920.js"></script>
 </body>

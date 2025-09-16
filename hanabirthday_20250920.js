@@ -71,3 +71,63 @@ function animate() {
 // 定期的に打ち上げ
 setInterval(launch, 800);
 animate();
+
+// window.addEventListener('load', () => {
+//     const heartBtn = document.getElementById('heartBtn');
+
+//     // 5秒後にボタンを表示
+//     setTimeout(() => {
+//       heartBtn.classList.add('show');
+//     }, 5000);
+
+//     // ボタンがクリックされたときの処理
+//     heartBtn.addEventListener('click', () => {
+//       alert('ボタンがクリックされました！');
+//       // ここにモーダル表示の処理などを書ける
+//     });
+//   });
+
+  window.addEventListener('load', () => {
+  const heartBtn = document.getElementById('heartBtn');
+  const modal = document.getElementById('modal');
+  const closeBtn = document.querySelector('.close');
+  const letter = document.getElementById('letter');
+
+  // 5秒後にハートボタンを表示
+  setTimeout(() => {
+    heartBtn.classList.add('show');
+  }, 6500);
+
+  // タイプライター関数
+  function typeWriter(text, element, speed = 50) {
+    element.textContent = ''; // 一旦空に
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    type();
+  }
+
+  // ハートボタンを押したらモーダルを開いてタイプライター開始
+  heartBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+    const message = 'いつもありがとう！これからもよろしくね。'; // 手紙の本文
+    typeWriter(message, letter, 80); // speed=80msごとに1文字
+  });
+
+  // ×ボタンを押したら閉じる
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // 背景クリックでも閉じる
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
