@@ -626,15 +626,33 @@ canvas#bg {
   background-color: rgba(0,0,0,0.5); /* 半透明の背景 */
 }
 
-/* モーダルの中身 */
 .modal-content {
-  background-color: #fff;
+  background: linear-gradient(135deg, #ffe6f0 0%, #ffffff 100%); /* ピンク系グラデ */
   margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px 20px;
+  border-radius: 20px; /* 丸みを強める */
   width: 80%;
   max-width: 400px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* ふんわり影 */
+
+  /* フェードイン＋拡大 */
+  animation: modalFade 0.5s ease-out forwards;
+  transform: scale(0.95);
+}
+
+/* タイトルや本文のスタイル */
+.modal-content h1 {
+  font-family: 'Cursive', sans-serif; /* 可愛いフォント（Google Fontsと併用も可） */
+  font-size: 1.8rem;
+  color: #ff6fa0;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
 /* 閉じるボタン */
