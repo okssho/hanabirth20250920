@@ -115,7 +115,7 @@ animate();
   // ハートボタンを押したらモーダルを開いてタイプライター開始
   heartBtn.addEventListener('click', () => {
     modal.style.display = 'block';
-    const message = 'いつもありがとう！これからもよろしくね。'; // 手紙の本文
+    const message = '付き合ってくれてありがとう！これからもよろしく！！'; // 手紙の本文
     typeWriter(message, letter, 80); // speed=80msごとに1文字
   });
 
